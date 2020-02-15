@@ -4,8 +4,12 @@
   "index_patterns": "elastiflow-3.5.3-*",
   "settings": {
     "index": {
-      "number_of_shards": 3,
-      "number_of_replicas": 1,
+      "lifecycle": {
+        "name": "elastiflow-3.5.1",
+        "rollover_alias": "elastiflow-3.5.1"
+      },
+      "number_of_shards": 1,
+      "number_of_replicas": 0,
       "refresh_interval": "10s",
       "codec": "best_compression",
       "mapping": {
